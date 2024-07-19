@@ -22,3 +22,7 @@ bld/
 *.nupkg
 *.snupkg
 packages/
+
+* text=auto
+*.cs text eol=crlf
+*.sh text eol=lf
