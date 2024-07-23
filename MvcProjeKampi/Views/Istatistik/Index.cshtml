@@ -1,0 +1,86 @@
+﻿﻿@model MvcProjeKampi.Controllers.IstatistikController
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<style>
+    .green {
+        background-color: #2ecc71;
+    }
+
+    .blue {
+        background-color: #3498db;
+    }
+
+    .yellow {
+        background-color: #f1c40f;
+        color: #333;
+    }
+
+    .purple {
+        background-color: #9b59b6;
+    }
+
+    .orange {
+        background-color: #e67e22;
+    }
+
+    .container {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+
+    .box {
+        flex: 1 1 calc(33.333% - 10px);
+        margin: 5px;
+        padding: 20px;
+        text-align: center;
+        color: white;
+        font-size: 20px;
+        font-weight: bold;
+    }
+
+    hr.thick {
+        border: 0;
+        height: 5px; /* Çizginin kalınlığı */
+        background-color: white; /* Çizginin rengi */
+        margin: 20px 0; /* Çizginin üst ve alt boşlukları */
+    }
+</style>
+<br />
+<h2>Istatistik Sonuçları</h2>
+
+@using (Html.BeginForm("IstatistikVeriler", "Istatistik", FormMethod.Post))
+{
+    <div class="container">
+        <div class="box green">
+            @ViewBag.CategoryCount
+            <br /><hr class="thick" />
+            @Html.Label("Toplam Kategori Sayısı ")
+        </div>
+        <div class="box blue">
+            @ViewBag.SoftwareHeadingCount
+            <br /><hr class="thick" />
+            @Html.Label("Yazılım Başlık Sayısı")
+        </div>
+        <div class="box yellow">
+            @ViewBag.WriterACount
+            <br /><hr class="thick" />
+            @Html.Label("A Harfi İçeren Yazar İsimleri")
+        </div>
+        <div class="box purple">
+            @ViewBag.CategoryWithMostHeadings
+            <br /><hr class="thick" />
+            @Html.Label("En Fazla Başlığa Sahip Kategori Adı")
+        </div>
+        <div class="box orange">
+            @ViewBag.CategoryStatusFark
+            <br /><hr class="thick" />
+            @Html.Label("Kategori Durum Farkı Sayısı")
+        </div>
+    </div>
+
+}

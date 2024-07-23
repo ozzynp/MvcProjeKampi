@@ -1,0 +1,47 @@
+﻿@model EntityLayer.Concrete.Category
+
+@{
+    ViewBag.Title = "EditCategory";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<br />
+<h2>Kategori Güncelleme Sayfası</h2>
+<br />
+
+@if (ViewBag.ErrorMessage != null)
+{
+    <div class="alert alert-danger">
+        @ViewBag.ErrorMessage
+    </div>
+}
+
+@using (Html.BeginForm("EditCategory", "AdminCategory", FormMethod.Post))
+{
+    @Html.HiddenFor(x => x.CategoryID)
+    <div>
+        @Html.Label("Kategori ID")
+        @Html.TextBoxFor(x => x.CategoryID, new { @class = "form-control", @readonly = "readonly" })
+        <br />
+        @Html.Label("Kategori Adı")
+        @Html.TextBoxFor(x => x.CategoryName, new { @class = "form-control" })
+        <br />
+        @Html.Label("Kategori Açıklaması")
+        @Html.TextAreaFor(x => x.CategoryDescription, new { @class = "form-control" })
+        <br />
+        <button class="btn btn-success">Güncelle</button>
+    </div>
+}
+
+@* ModelState hatalarını listeleme *@
+@if (!ViewData.ModelState.IsValid)
+{
+    <div class="alert alert-danger">
+        <ul>
+            @foreach (var error in ViewData.ModelState.Values.SelectMany(v => v.Errors))
+            {
+                <li>@error.ErrorMessage</li>
+            }
+        </ul>
+    </div>
+}
