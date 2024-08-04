@@ -17,12 +17,12 @@ namespace BusinessLayer.Concrete
 
         public List<Message> GetListInbox()
         {
-            return _messageDal.List(x => x.ReceiverMail == "admin@gmail.com" );
+            return _messageDal.List(x => x.ReceiverMail == "mutlu@gmail.com");
         }
 
         public List<Message> GetListSent()
         {
-            return _messageDal.List(x => x.SenderMail == "admin@gmail.com" && x.IsSent == true);
+            return _messageDal.List(x => x.SenderMail == "mutlu@gmail.com" && x.IsSent == true);
         }
         public List<Message> GetListDraft()
         {

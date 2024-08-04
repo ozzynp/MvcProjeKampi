@@ -11,6 +11,7 @@ namespace MvcProjeKampi.Controllers
     public class ContentController : Controller
     {
         ContentManager cm = new ContentManager(new EfContentDal());
+
         // GET: Content
         public ActionResult Index()
         {

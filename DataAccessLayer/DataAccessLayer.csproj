@@ -23,7 +23,7 @@
     <OutputPath>bin\Debug\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
+    <WarningLevel>0</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -40,9 +40,30 @@
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.5.1\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.3.0\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.3.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.3.0\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.3.0\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.3.0\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.3.0\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.3.0\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -70,57 +91,9 @@
     <Compile Include="EntityFramework\EfImageFileDal.cs" />
     <Compile Include="EntityFramework\EfMessageDal.cs" />
     <Compile Include="EntityFramework\EfWriterDal.cs" />
-    <Compile Include="Migrations\202406240904109_mig1.cs" />
-    <Compile Include="Migrations\202406240904109_mig1.Designer.cs">
-      <DependentUpon>202406240904109_mig1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202407081353399_mig_writer_edit.cs" />
-    <Compile Include="Migrations\202407081353399_mig_writer_edit.Designer.cs">
-      <DependentUpon>202407081353399_mig_writer_edit.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202407090648260_mig_writertitle_add.cs" />
-    <Compile Include="Migrations\202407090648260_mig_writertitle_add.Designer.cs">
-      <DependentUpon>202407090648260_mig_writertitle_add.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202407091347298_mig_image_sizechange.cs" />
-    <Compile Include="Migrations\202407091347298_mig_image_sizechange.Designer.cs">
-      <DependentUpon>202407091347298_mig_image_sizechange.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202407091434408_mig_writer_addstatus.cs" />
-    <Compile Include="Migrations\202407091434408_mig_writer_addstatus.Designer.cs">
-      <DependentUpon>202407091434408_mig_writer_addstatus.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202407100911531_mig_add_contentstatus.cs" />
-    <Compile Include="Migrations\202407100911531_mig_add_contentstatus.Designer.cs">
-      <DependentUpon>202407100911531_mig_add_contentstatus.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202407100918076_mig_addheadingstatus.cs" />
-    <Compile Include="Migrations\202407100918076_mig_addheadingstatus.Designer.cs">
-      <DependentUpon>202407100918076_mig_addheadingstatus.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202407110851579_mig_addmessage.cs" />
-    <Compile Include="Migrations\202407110851579_mig_addmessage.Designer.cs">
-      <DependentUpon>202407110851579_mig_addmessage.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202407171902240_mig_addmessageissent.cs" />
-    <Compile Include="Migrations\202407171902240_mig_addmessageissent.Designer.cs">
-      <DependentUpon>202407171902240_mig_addmessageissent.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202407181354280_addmessagedeleted.cs" />
-    <Compile Include="Migrations\202407181354280_addmessagedeleted.Designer.cs">
-      <DependentUpon>202407181354280_addmessagedeleted.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202407181437340_mig_adddatecontac.cs" />
-    <Compile Include="Migrations\202407181437340_mig_adddatecontac.Designer.cs">
-      <DependentUpon>202407181437340_mig_adddatecontac.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202407191417571_mig_addimagefiles.cs" />
-    <Compile Include="Migrations\202407191417571_mig_addimagefiles.Designer.cs">
-      <DependentUpon>202407191417571_mig_addimagefiles.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202407220752449_mig_update.cs" />
-    <Compile Include="Migrations\202407220752449_mig_update.Designer.cs">
-      <DependentUpon>202407220752449_mig_update.cs</DependentUpon>
+    <Compile Include="Migrations\202408021317018_addadmin.cs" />
+    <Compile Include="Migrations\202408021317018_addadmin.Designer.cs">
+      <DependentUpon>202408021317018_addadmin.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -136,47 +109,10 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202406240904109_mig1.resx">
-      <DependentUpon>202406240904109_mig1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202407081353399_mig_writer_edit.resx">
-      <DependentUpon>202407081353399_mig_writer_edit.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202407090648260_mig_writertitle_add.resx">
-      <DependentUpon>202407090648260_mig_writertitle_add.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202407091347298_mig_image_sizechange.resx">
-      <DependentUpon>202407091347298_mig_image_sizechange.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202407091434408_mig_writer_addstatus.resx">
-      <DependentUpon>202407091434408_mig_writer_addstatus.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202407100911531_mig_add_contentstatus.resx">
-      <DependentUpon>202407100911531_mig_add_contentstatus.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202407100918076_mig_addheadingstatus.resx">
-      <DependentUpon>202407100918076_mig_addheadingstatus.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202407110851579_mig_addmessage.resx">
-      <DependentUpon>202407110851579_mig_addmessage.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202407171902240_mig_addmessageissent.resx">
-      <DependentUpon>202407171902240_mig_addmessageissent.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202407181354280_addmessagedeleted.resx">
-      <DependentUpon>202407181354280_addmessagedeleted.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202407181437340_mig_adddatecontac.resx">
-      <DependentUpon>202407181437340_mig_adddatecontac.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202407191417571_mig_addimagefiles.resx">
-      <DependentUpon>202407191417571_mig_addimagefiles.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202407220752449_mig_update.resx">
-      <DependentUpon>202407220752449_mig_update.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202408021317018_addadmin.resx">
+      <DependentUpon>202408021317018_addadmin.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
