@@ -10,6 +10,7 @@ namespace BusinessLayer.Abstarct
     public interface IMessageService
     {
         List<Message> GetListInbox();
+      //  List<Message> GetListInbox();
         List<Message> GetListSent();
        
         List<Message> GetListDraft();
