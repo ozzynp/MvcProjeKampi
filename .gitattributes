@@ -1,8 +1,9 @@
-* text=auto
-*.cs linguist-language=C#
-*.cshtml linguist-language=HTML
-*.js linguist-vendored
-*.css linguist-vendored
-*.html linguist-vendored
+# SCSS dosyalarını dil tespitinden hariç tutma
 *.scss linguist-vendored
 
+# .NET dosyalarını dil tespitinde önceliklendirme
+*.cs linguist-language=C#
+*.cshtml linguist-language=HTML
+*.config linguist-language=XML
+*.csproj linguist-language=XML
+*.sln linguist-language=Text
