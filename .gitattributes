@@ -1,7 +1,7 @@
 
 * text=auto
 *.cs linguist-language=C#
-*.cshtml linguist-language=HTML
+*.cshtml linguist-language=C#
 
 *.js linguist-vendored
 
