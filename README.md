@@ -17,3 +17,8 @@
 ![image](https://github.com/user-attachments/assets/439bbf1c-6c3c-4fb7-aca8-e2fbd4a4c7ba)
 
 ![image](https://github.com/user-attachments/assets/1b036076-f5fb-4599-9855-7681fab4a834)
+
+
+ödevler
+![image](https://github.com/user-attachments/assets/e26a8cad-baf3-42dc-b718-14d48e6831b7)
+![image](https://github.com/user-attachments/assets/435ab02c-8327-4ecb-a062-409d6326dfdd)
