@@ -1,1 +1,12 @@
+Original file line number	Original file line	Diff line number	Diff line change
 * text=auto
+*.cs linguist-language=C#
+*.cshtml linguist-language=HTML
+
+*.js linguist-vendored
+
+*.css linguist-vendored
+
+*.html linguist-vendored
+
+*.scss linguist-vendored
